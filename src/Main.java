@@ -31,16 +31,16 @@ public class Main {
             }
         }
 
+        boolean t = true;
+
         for (i = 0; i < 10; i++){
-            int s = snum.indexOf("" + i);
-            int z = snum.lastIndexOf("" + i);
-            if(s != z){
-                System.out.println("false");
+
+            if(snum.indexOf("" + i) != snum.lastIndexOf("" + i)){
+                t = false;
                 break;
-            }else if(i == 9){
-                System.out.println("true");
             }
         }
+        System.out.println(t);
     }
 }
 
