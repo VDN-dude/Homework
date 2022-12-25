@@ -48,7 +48,7 @@ public class Main {
         String RES = snum;
          for (int l = match.length(); l > 2 ; l-- ){
              match.substring(0);
-             for(int i = 0; i <= match.length()-l; i++) {
+             for(i = 0; i <= match.length()-l; i++) {
                  String found = match.substring(i, i+l);
                  if (RES.contains(found) == true){
                      StringBuffer reverse = new StringBuffer(found);
