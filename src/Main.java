@@ -7,10 +7,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String snum = scanner.next();
         StringBuffer rev = new StringBuffer(snum);
-
+//point 1
         rev.reverse();
         System.out.println("Reversed number: "+rev);
-
+//point 2
         int i;
         for (i = 0; i < 10; i++) {
 
@@ -31,6 +31,7 @@ public class Main {
             }
         }
 
+//point 3
         boolean t = true;
 
         for (i = 0; i < 10; i++){
@@ -41,8 +42,24 @@ public class Main {
             }
         }
         System.out.println(t);
+
+// point 4
+        String match = "0123456789";
+        String RES = snum;
+         for (int l = match.length(); l > 2 ; l-- ){
+             match.substring(0);
+             for(int i = 0; i <= match.length()-l; i++) {
+                 String found = match.substring(i, i+l);
+                 if (RES.contains(found) == true){
+                     StringBuffer reverse = new StringBuffer(found);
+                     reverse.reverse();
+                     RES = RES.replaceAll(found, " " + reverse + " ");
+                     System.out.println("Found: "+ found + " result: " + reverse);
+                 }
+             }
+         }
+        System.out.println("number with spaces around revers values: " + RES);
     }
 }
-
 
 
